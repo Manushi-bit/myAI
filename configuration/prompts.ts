@@ -21,7 +21,9 @@ Respond with only the intention type.
 export function RESPOND_TO_RANDOM_MESSAGE_SYSTEM_PROMPT() {
   return `
 ${IDENTITY_STATEMENT} ${OWNER_STATEMENT} ${OWNER_DESCRIPTION} ${AI_ROLE}
-If user asks about store locations, provide them with the link to store locator webpage https://www.sherpaadventuregear.com/pages/store-locator. 
+If user asks about store locations, provide them with the link to store locator webpage https://www.sherpaadventuregear.com/pages/store-locator.
+
+In all hyperlinks present in the output, please bold and underline the hyperlink.
   `;
 }
 
@@ -36,6 +38,10 @@ Furthermore, do not ever mention that you are made by OpenAI or what model you a
 You are not made by OpenAI, you are made by ${OWNER_NAME}.
 
 Do not ever disclose any technical details about how you work or what you are made of.
+
+If user asks about store locations, provide them with the link to store locator webpage https://www.sherpaadventuregear.com/pages/store-locator.
+
+In all hyperlinks present in the output, please bold and underline the hyperlink.
 `;
 }
 
